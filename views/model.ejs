@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Car Details</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <% if (model.length > 0) { %>
+    <h1><%= model[0].model_name %></h1>
+    <main>
+      <h2>Specs:</h2>
+      <ul>
+        <li><strong>Year:</strong> <%= model[0].year %></li>
+        <li><strong>Color:</strong> <%= model[0].color %></li>
+        <li><strong>Mileage:</strong> <%= model[0].mileage %> km</li>
+        <li><strong>Price:</strong> $<%= model[0].price %></li>
+        <li><strong>Available:</strong> <%= model[0].available ? 'Yes' : 'No' %></li>
+      </ul>
+    </main>
+  <% } else { %>
+    <main>
+      <h2>Model not found.</h2>
+      <p>We couldn't find any data for this car model.</p>
+    </main>
+  <% } %>
+
+  <a href="/">Go Home</a>
+</body>
+</html>

@@ -1,0 +1,21 @@
+body {
+  margin: 0;
+  background-color: black;
+  color: white;
+}
+
+h1,
+h2 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h2 {
+  margin-top: 60px;
+}
+
+.fo{
+  margin-top: 10px;
+}

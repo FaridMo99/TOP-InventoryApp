@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <h1>Car-Shop</h1>
+    <main>
+        <h2>The Brands we offer:</h2>
+        <ul>
+            <% brands.forEach(brand=>{ %>
+        <li><a href="/<%= brand.name %>"><%= brand.name %></a></li>
+            <%})%>
+        </ul>
+        <form action="/" method="POST">
+            <label for="brandAdd">Add Brand:</label>
+            <input name="brand" id="brandAdd" type="text" required>
+            <button type="submit">Add</button>
+        </form>
+        <form class="fo" action="/" method="POST">
+            <label for="brandDelete">Remove Brand:</label>
+            <input name="brandDelete" id="brandDelete" type="text" required>
+            <button type="submit">Remove</button>
+        </form>
+    </main>
+</body>
+</html>
